@@ -1,7 +1,7 @@
 import React from "react";
+import css from "./style.module.css"
 
-
-export class Input {
+export class Header extends React.Component {
     render() {
         return;
     }

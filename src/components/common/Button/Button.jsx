@@ -1,8 +1,20 @@
 import React from "react";
+import css from "./style.module.css"
 
+export class Button extends React.Component {
+    state = {
+        action: false
+    }
 
-export class Button {
+    onClick = (event) => {
+        
+    }
+
     render() {
-        return;
+        return(
+            <button className={css.button} onClick>
+                button
+            </button>
+        )
     }
 }

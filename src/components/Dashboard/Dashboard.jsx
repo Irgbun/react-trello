@@ -1,7 +1,7 @@
 import React from "react";
+import css from "./style.module.css"
 
-
-export class Input {
+export class Dashboard extends React.Component {
     render() {
         return;
     }

@@ -1,8 +1,18 @@
 import React from "react";
+import css from "./style.module.css"
 
+export class Input extends React.Component {
+    state = {
+        value: ""
+    }
 
-export class Input {
+    changeValue = (event) => {
+        this.setState({ value: event.target.value })
+    }
+
     render() {
-        return;
+        return(
+            <input className={css.input} value={ this.state.value } onChange={ this.changeValue } />
+        )
     }
 }
