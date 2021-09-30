@@ -1,15 +1,18 @@
 import React from "react";
 import css from "./style.module.css"
-export { Button, Input } from "../common/"
+import { Button, Input } from "../common/"
 
 
 export class Card extends React.Component {
+
+
+    
     render() {
         return(
             <div className={css.card}>
                 <div>
                     <div>
-                        { title }
+                        {/* { title } */}
                     </div>
                     <div>
                         <Input />

@@ -1,9 +1,8 @@
 import React from "react";
-import { Button, Calendar, Input } from "./common"
+import { Button, Calendar, Input, Modal } from "./common"
 import { Card } from "./Card"
 import { Header } from "./Header"
 import { Dashboard } from "./Dashboard"
-import { Modal } from "./Modal"
 
 
 export class App extends React.Component {
@@ -22,7 +21,16 @@ export class App extends React.Component {
         <Button />
         <Input />
         <Calendar />
-        <Card />
+
+
+        <Card>
+          /
+        </ Card>
+
+
+        <Modal>
+          Something
+        </ Modal>
       </div>
     )
   }
