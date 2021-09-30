@@ -1,9 +1,8 @@
 import React from "react";
-import { Button, Calendar, Input } from "./common"
+import { Button, Calendar, Input, Modal } from "./common"
 import { Card } from "./Card"
 import { Header } from "./Header"
 import { Dashboard } from "./Dashboard"
-import { Modal } from "./Modal"
 
 
 export class App extends React.Component {
@@ -19,10 +18,27 @@ export class App extends React.Component {
         <Dashboard />
         <Calendar /> 
         */}
-        <Button />
-        <Input />
-        <Calendar />
-        <Card />
+        <Card>
+          <div>
+            todo
+            <Input value={ this.state.value } onChange={ this.parent.changeValue } isVisible />
+          </div>
+          <div>
+            <div>
+              <Button onClick={ this.props.onClickAdd }>
+                Добавить
+              </Button>
+              <Button onClick={ this.props.onClickCancel }>
+                Отменить
+              </Button>
+            </div>
+          </div>
+        </ Card>
+
+
+        <Modal>
+          <Calendar />
+        </ Modal>
       </div>
     )
   }
