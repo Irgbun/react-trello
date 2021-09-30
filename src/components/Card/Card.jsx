@@ -4,27 +4,29 @@ import { Button, Input } from "../common/"
 
 
 export class Card extends React.Component {
+    state = {
+        value: '',
+        isVisible: false,
 
+    }
+
+    changeValue = (event) => {
+        this.setState({ value: event.target.value })
+    }
+
+    onClickAdd = () => {
+        this.setState({ isVisible: true })
+    }
+
+    onClickCancel = () => {
+        this.setState({ isVisible: false })
+    }
 
     
     render() {
         return(
             <div className={css.card}>
-                <div>
-                    <div>
-                        {/* { title } */}
-                    </div>
-                    <div>
-                        <Input />
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <Button>
-                            zdgsdg
-                        </Button>
-                    </div>
-                </div>
+                { this.props.children }
             </div>
         )
     }

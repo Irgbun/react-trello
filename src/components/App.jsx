@@ -18,18 +18,26 @@ export class App extends React.Component {
         <Dashboard />
         <Calendar /> 
         */}
-        <Button />
-        <Input />
-        <Calendar />
-
-
         <Card>
-          /
+          <div>
+            todo
+            <Input value={ this.state.value } onChange={ this.parent.changeValue } isVisible />
+          </div>
+          <div>
+            <div>
+              <Button onClick={ this.props.onClickAdd }>
+                Добавить
+              </Button>
+              <Button onClick={ this.props.onClickCancel }>
+                Отменить
+              </Button>
+            </div>
+          </div>
         </ Card>
 
 
         <Modal>
-          Something
+          <Calendar />
         </ Modal>
       </div>
     )
